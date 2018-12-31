@@ -7,11 +7,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class HelloController {
 
-    @Autowired
     private HelloService service;
 
+    public HelloController(HelloService service) {
+        this.service = service;
+    }
 
-    public void sayHello(){
-        service.hello();
+    public String sayHello(){
+        return service.hello();
     }
 }
