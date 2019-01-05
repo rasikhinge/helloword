@@ -8,8 +8,10 @@ pipeline{
                             }
                     }
 					stage('changeDirectory'){
-							dir("firstspringbootproject"){
-								"cd  firstspringbootproject"
+							steps{
+								dir("firstspringbootproject"){
+									"cd  firstspringbootproject"
+								}
 							}
 					}
                     stage('compile'){
