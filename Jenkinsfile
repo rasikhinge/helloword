@@ -10,6 +10,7 @@ pipeline{
 					stage('changeDirectory'){
 							steps{
 								bat "dir"
+								bat "cd firstspringbootproject"
 							}
 					}
                     stage('compile'){
