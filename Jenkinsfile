@@ -10,7 +10,9 @@ pipeline{
 					stage('changeDirectory'){
 							steps{
 								dir("firstspringbootproject"){
+									steps{
 									"cd  firstspringbootproject"
+									}
 								}
 							}
 					}
