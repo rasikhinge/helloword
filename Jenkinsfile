@@ -1,29 +1,18 @@
 pipeline{
     agent any
             stages{
-                    stage('One'){
+                    stage('build'){
                             steps{
                                     echo 'Hello, this is first step'
-									sh 'mvn --version'
+									bat "cd firstspringbootproject"
+									bat "mvn package"
                             }
                     }
-                    stage('Two'){
+                    stage('test'){
                             steps{
                                     input('Do you want to proceed ?')
                             }
                     }
-                    stage('Three'){
-                             when{
-                                    not{
-                                         branch "master"
-                                    }
-                             }
-                             steps{
-                                    echo "Hello"
-                             }
-                    }
-
-
                   }
 
 }
