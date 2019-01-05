@@ -5,9 +5,13 @@ pipeline{
                             steps{
                                     echo 'Hello, this is first step'
 									git "https://github.com/rasikhinge/helloword.git"
-									bat "cd firstspringbootproject"
                             }
                     }
+					stage('changeDirectory'){
+							steps{
+								bit "cd firstspringbootproject"
+							}
+					}
                     stage('compile'){
                             steps{
 								   echo "compile"
