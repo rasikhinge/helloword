@@ -8,14 +8,13 @@ pipeline{
                             }
                     }
 					stage('changeDirectory'){
-							steps{
-								bat "cd firstspringbootproject"
+							dir("firstspringbootproject"){
+								"cd  firstspringbootproject"
 							}
 					}
                     stage('compile'){
                             steps{
 								   echo "compile"
-								   bat "mvn -f './firstspringbootproject/pom.xml'"
 								   bat "mvn package"
                             }
                     }
