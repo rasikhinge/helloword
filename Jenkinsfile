@@ -15,7 +15,7 @@ pipeline{
                     stage('compile'){
                             steps{
 								   echo "compile"
-								   bat "mvn -f './firstspringbootproject/pom.xml'"
+								   bat "mvn -f ./firstspringbootproject/pom.xml"
 								   bat "mvn package"
                             }
                     }
