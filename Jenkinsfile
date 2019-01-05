@@ -11,8 +11,8 @@ pipeline{
                     stage('compile'){
                             steps{
 								   echo "compile"
-								   sh "cd firstspringbootproject"
-								   sh "mvn package"
+								   bat "cd firstspringbootproject"
+								   bat "mvn package"
                             }
                     }
                   }
