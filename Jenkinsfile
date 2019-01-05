@@ -9,11 +9,7 @@ pipeline{
                     }
 					stage('changeDirectory'){
 							steps{
-								dir("firstspringbootproject"){
-									steps{
-									"cd  firstspringbootproject"
-									}
-								}
+								bat "dir"
 							}
 					}
                     stage('compile'){
