@@ -16,6 +16,7 @@ pipeline{
                     stage('compile'){
                             steps{
 								   echo "compile"
+								   bat "mvn -f pom.xml"
 								   bat "mvn package"
                             }
                     }
